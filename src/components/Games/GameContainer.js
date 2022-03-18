@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import GameHeader from './GameHeader'
 import GameListContainer from './GameListContainer'
-import GameOptionSelector from './GameOptionSelector'
 import Error from '../Common/Error'
 import Loader from '../Common/Loader'
 
@@ -48,7 +47,6 @@ export default function GameContainer() {
   return (
     <main className="outlet">
       <GameHeader/>
-      <GameOptionSelector/>
       {renderGameList()}
     </main>
   )

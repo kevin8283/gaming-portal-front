@@ -4,9 +4,9 @@ import { DataGrid } from '@mui/x-data-grid'
 export default function GameListContainer({games}) {
 
     const columns = [
-        {field: "title", headerName: "Titre", width: 350},
-        {field: "size", headerName: "Taille (go)", width: 100},
-        {field: "price", headerName: "Prix (Ariary)", width: 100},
+        {field: "title", headerName: "Titre", width: 500},
+        {field: "size", headerName: "Taille (go)", width: 250},
+        {field: "price", headerName: "Prix (Ariary)", width: 250},
     ]
 
     const rows = [...games]
