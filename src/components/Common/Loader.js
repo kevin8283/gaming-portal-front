@@ -4,7 +4,7 @@ import { CircularProgress } from '@mui/material'
 export default function Loader() {
   return (
     <div className="common-container">
-      <CircularProgress color="secondary" className="loader"/>
+      <CircularProgress color="success" className="loader"/>
     </div>
   )
 }

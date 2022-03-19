@@ -10,7 +10,7 @@ export default function GameHeader() {
         <div className="header-secondary-title">Consultez la liste des jeux disponibles, triés par taille, prix ou alphabétiquement</div>
       </div>
       <div className="action-buttons">
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" color="success">
           <AddCircle/>
           <span className="button-text">Nouveau jeu</span>
         </Button>

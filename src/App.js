@@ -10,17 +10,17 @@ import "./App.css"
 
 export default function App() {
   return (
-    <main className="app">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Navbar />}>
-            <Route index element={<Home />} />
-            <Route path="games" element={<GameContainer />} />
-            <Route path="purchases" element={<PurchaseContainer />} />
-            <Route path="clients" element={<ClientContainer />} />
-          </Route>
-        </Routes>
-      </Router>
-    </main>
+      <main className="app">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Navbar />}>
+              <Route index element={<Home />} />
+              <Route path="games" element={<GameContainer />} />
+              <Route path="purchases" element={<PurchaseContainer />} />
+              <Route path="clients" element={<ClientContainer />} />
+            </Route>
+          </Routes>
+        </Router>
+      </main>
   )
 }

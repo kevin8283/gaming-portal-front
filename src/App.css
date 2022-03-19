@@ -1,8 +1,9 @@
 .app {
     height: 100vh;
+    overflow: hidden;
 }
 .navbar {
-    height: 96%;
+    height: 100%;
     display: flex;
     flex: 1;
 }
@@ -11,10 +12,20 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: flex-start;
     padding: 2vh;
-    background: #242735;
+    margin-right: 2vh;
+    background: #ffffff;
+    box-shadow: 0vh 0vh 1vh #979797de;
+}
+.nav-header {
+    width: 100%;
+    flex: 1;
+    border-bottom: 0.15vh solid #9494947c;
+}
+.nav-body {
+    flex: 6;
+    margin-top: 5vh;
 }
 .link {
     height: 5vh;
@@ -22,13 +33,16 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #ffffff;
+    color: #4d4d4d;
     padding-left: 2vh;
     margin-left: 2vh;
     margin-right: 2vh;
+    font-weight: 600;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
 }
 .link:hover {
-    color: #8b49e0;
+    color: #0ba35c;
     transition: 0.15s ease-in-out;
 }
 .icon-link {
@@ -46,7 +60,7 @@
     padding-top: 2.5vh;
     padding-left: 2vh;
     background-color: #fefefe;
-    box-shadow: 0vh 0vh 0.5vh #4a5761b6;
+    overflow-y: scroll;
 }
 .common-container {
     height: 90%;
@@ -61,15 +75,14 @@
     padding-left: 2vh;
     padding-top: 2vh;
     height: 14vh;
-    background-color: #ffffff;
-    box-shadow: 0vh 0vh 0.5vh #4a5761b6;
+    border-bottom: 0.15vh solid #9494947c;
     margin-bottom: 2.5vh;
 }
 .header-title {
     font-size: 1.5em;
     font-weight: 400;
     font-style: italic;
-    color: #4d0ba3;
+    color: #0ba35c;
 }
 .header-secondary-title {
     margin-top: 2.5vh;
@@ -77,4 +90,99 @@
     font-weight: 400;
     font-style: italic;
     color: #423b4ba9;
+}
+.logo {
+    width: 5vh;
+    height: 5vh;
+    margin-right: 2vh;
+}
+
+
+.home-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 13.25vh;
+    padding-left: 2.5vh;
+    margin-bottom: 4vh;
+    border-bottom: 0.15vh solid #9494947c;
+}
+.home-header-title {
+    font-weight: 600;
+    font-size: 1.25em;
+    color: #0ba35c;
+}
+.home-header-secondary-title {
+    margin-top: 2.5vh;
+    font-weight: 400;
+    font-style: italic;
+}
+.home-body {
+    padding: 2vh;
+    height: 100%;
+}
+.incomes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+}
+.income {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 30vh;
+    height: 25vh;
+    border-radius: 4vh;
+    padding-left: 2.5vh;
+}
+.income-title {
+    font-weight: 600;
+}
+.income-amount {
+    font-size: 2em;
+    font-weight: 600;
+    color: #212331;
+    font-family: "Roboto", sans-serif;
+}
+.income-text {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #212331;
+}
+.income-daily {
+    border: 1px solid #0ba35c;
+    background-color: #f2f3f279;
+}
+.income-weekly {
+    border: 1px solid #d6d303;
+    background-color: #f3f2f379;
+}
+.most-game-weekly {
+    border: 1px solid #1187be;
+    background-color: #f3f2f379;
+}
+.least-game-weekly {
+    border: 1px solid #be112e;
+    background-color: #f3f2f379;
+}
+.daily-title {
+    color: #10834d;
+}
+.weekly-title {
+    color: #77750f;
+}
+.most-weekly-title {
+    color: #145d80;
+}
+.least-weekly-title {
+    color: #c9233e;
+}
+.charts {
+    display: flex;
+    justify-content: space-around;
+}
+.line-chart {
+    width: 75vh;
+    height: 45vh;
 }
