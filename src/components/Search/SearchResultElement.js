@@ -6,9 +6,13 @@ export default function SearchResultElement({ datas }) {
 
     const primaryText = datas.title ? `${datas.title} (${datas.size} go)` : datas.name
 
+    const handleClick = () => {
+       
+    }
+
     return (
         <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={handleClick}>
                 <ListItemIcon>
                     {datas.title ? <SportsEsports /> : <Person />}
                 </ListItemIcon>
