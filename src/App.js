@@ -5,6 +5,7 @@ import GameContainer from "./components/Games/GameContainer"
 import PurchaseContainer from "./components/Purchases/PurchaseContainer"
 import ClientContainer from "./components/Clients/ClientContainer"
 import Navbar from './components/Navbar/Navbar'
+import Search from './components/Search/Search'
 import "./App.css"
 
 
@@ -15,6 +16,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Navbar />}>
               <Route index element={<Home />} />
+              <Route path="search" element={<Search />} />
               <Route path="games" element={<GameContainer />} />
               <Route path="purchases" element={<PurchaseContainer />} />
               <Route path="clients" element={<ClientContainer />} />
