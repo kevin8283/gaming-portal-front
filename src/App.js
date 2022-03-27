@@ -8,23 +8,29 @@ import NewPurchase from './components/Purchases/NewPurchase'
 import Navbar from './components/Navbar/Navbar'
 import Search from './components/Search/Search'
 import "./App.css"
-
+import GameContextProvider from './context/GameContext'
+import ClientContextProvider from './context/ClientContext'
 
 export default function App() {
+
   return (
-      <main className="app">
-        <Router>
-          <Routes>
-            <Route path="/" element={<Navbar />}>
-              <Route index element={<Home />} />
-              <Route path="search" element={<Search />} />
-              <Route path="games" element={<GameContainer />} />
-              <Route path="purchases" element={<PurchaseContainer />} />
-              <Route path="purchases/new" element={<NewPurchase />} />
-              <Route path="clients" element={<ClientContainer />} />
-            </Route>
-          </Routes>
-        </Router>
-      </main>
+    <GameContextProvider>
+      <ClientContextProvider>
+        <main className="app">
+          <Router>
+            <Routes>
+              <Route path="/" element={<Navbar />}>
+                <Route index element={<Home />} />
+                <Route path="search" element={<Search />} />
+                <Route path="games" element={<GameContainer />} />
+                <Route path="purchases" element={<PurchaseContainer />} />
+                <Route path="purchases/new" element={<NewPurchase />} />
+                <Route path="clients" element={<ClientContainer />} />
+              </Route>
+            </Routes>
+          </Router>
+        </main>
+      </ClientContextProvider>
+    </GameContextProvider>
   )
 }
