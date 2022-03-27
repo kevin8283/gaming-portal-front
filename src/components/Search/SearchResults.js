@@ -2,9 +2,11 @@ import React from 'react'
 import { List } from '@mui/material'
 import SearchResultElement from './SearchResultElement'
 import RectangularSkeleton from '../Common/RectangularSkeleton'
+import Error from '../Common/Error'
 
-export default function SearchResults({ searchResults, isLoading }) {
-  
+export default function SearchResults({ searchResults, isLoading, isError }) {
+  const errorMessage = "Erreur réseau - Veuillez vérifier votre connexion"
+
   const renderResults = (datas) => {
     if (isLoading) {
       return <RectangularSkeleton number={5}/>
@@ -16,7 +18,7 @@ export default function SearchResults({ searchResults, isLoading }) {
 
   return (
     <List>
-      {renderResults(searchResults)}
+      {isError ? <Error message={errorMessage}/> : renderResults(searchResults)}
     </List>
   )
 }

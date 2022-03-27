@@ -12,11 +12,11 @@ export default function SearchBody({ filterState }) {
 
   const handleSubmit = (textValue) => {
     setText(textValue)
-    setLoading(true)
   }
 
   useEffect(() => {
     if (text !== "") {
+      setLoading(true)
       axios.post("http://localhost:8000/games/search", {
         title: text,
         filter: filterState

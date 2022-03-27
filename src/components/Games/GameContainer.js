@@ -24,6 +24,10 @@ export default function GameContainer() {
     }
   }
 
+  const useEffectCleanFunction = () => {
+    setGames([])
+  }
+
   const useEffectCallback = () => {
       fetchDatas("http://localhost:8000/games")
         .then(response => {
@@ -36,13 +40,11 @@ export default function GameContainer() {
           setError(true)
           setLoading(false)
         })
+
+        return useEffectCleanFunction
   }
 
-  const useEffectCleanFunction = () => {
-    setGames([])
-  }
-
-  useEffect(useEffectCallback, [], useEffectCleanFunction)
+  useEffect(useEffectCallback, [])
 
   return (
     <main className="outlet">

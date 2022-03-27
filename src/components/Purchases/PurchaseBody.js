@@ -18,6 +18,10 @@ export default function PurchaseBody() {
                 setError(true)
                 setLoading(false)
             })
+
+        return () => {
+            setPurchases([])
+        }
     }, [])
 
     return (

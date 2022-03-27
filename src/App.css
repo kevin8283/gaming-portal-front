@@ -202,3 +202,31 @@
     height: 100%;
     margin-left: 5vh;
 }
+
+.new-purchase-form {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+.new-purchase-game-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.purchase-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.purchase-game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
