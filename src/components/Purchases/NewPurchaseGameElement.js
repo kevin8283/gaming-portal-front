@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ListItem, ListItemButton, Checkbox, ListItemText } from '@mui/material'
 
-export default function NewPurchaseGameElement({ datas, checked }) {
+export default function NewPurchaseGameElement({ datas, handleCheck }) {
+
+    const [isChecked, setChecked] = useState(false)
 
     const handleClick = (id) => {
-        alert(id)
+        setChecked(!isChecked)
+        handleCheck(id)
     }
 
     return (
@@ -12,7 +15,7 @@ export default function NewPurchaseGameElement({ datas, checked }) {
             <ListItemButton dense onClick={() => {handleClick(datas._id)}}>
                 <Checkbox
                     edge="start"
-                    checked={checked}
+                    checked={isChecked}
                     tabIndex={-1}
                     disableRipple
                 />

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import PurchasesList from './PurchasesList'
+import React, { createContext, useState, useEffect } from 'react'
 import axios from 'axios'
 
-export default function PurchaseBody() {
+export const PurchaseContext = createContext()
+
+export default function PurchaseContextProvider({ children }) {
 
     const [purchases, setPurchases] = useState([])
     const [isLoading, setLoading] = useState(true)
@@ -20,7 +21,10 @@ export default function PurchaseBody() {
                 })
     }, [])
 
-    return (
-        <PurchasesList purchases={purchases} isLoading={isLoading} isError={isError}/>
+    return(
+        <PurchaseContext.Provider value={{purchases, isLoading, isError}}>
+            {children}
+        </PurchaseContext.Provider>
     )
+
 }

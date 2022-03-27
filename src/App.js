@@ -16,20 +16,20 @@ export default function App() {
   return (
     <GameContextProvider>
       <ClientContextProvider>
-        <main className="app">
-          <Router>
-            <Routes>
-              <Route path="/" element={<Navbar />}>
-                <Route index element={<Home />} />
-                <Route path="search" element={<Search />} />
-                <Route path="games" element={<GameContainer />} />
-                <Route path="purchases" element={<PurchaseContainer />} />
-                <Route path="purchases/new" element={<NewPurchase />} />
-                <Route path="clients" element={<ClientContainer />} />
-              </Route>
-            </Routes>
-          </Router>
-        </main>
+          <main className="app">
+            <Router>
+              <Routes>
+                <Route path="/" element={<Navbar />}>
+                  <Route index element={<Home />} />
+                  <Route path="search" element={<Search />} />
+                  <Route path="games" element={<GameContainer />} />
+                  <Route path="purchases" element={<PurchaseContainer />} />
+                  <Route path="purchases/new" element={<NewPurchase />} />
+                  <Route path="clients" element={<ClientContainer />} />
+                </Route>
+              </Routes>
+            </Router>
+          </main>
       </ClientContextProvider>
     </GameContextProvider>
   )
