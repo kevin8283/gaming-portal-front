@@ -45,6 +45,10 @@
     color: #0ba35c;
     transition: 0.15s ease-in-out;
 }
+.details-link {
+    text-decoration: none;
+    color: #08b162;
+}
 .icon-link {
     margin-top: 0.5vh;
 }
